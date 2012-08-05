@@ -1,0 +1,25 @@
+{
+  "name": "facebook-chat",
+  "version": "0.0.1",
+  "description": "Simple Facebook Chat XMPP client",
+  "main": "index.js",
+  "keywords": [
+    "facebook",
+    "chat",
+    "xmpp",
+    "api"
+  ],
+  "homepage": "https://github.com/SideraX/node-facebook-chat",
+  "dependencies": {
+    "node-xmpp": "",
+    "node-stringprep": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SideraX/node-facebook-chat.git"
+  },
+  "authors": {
+    "name": "Dimitri Larue",
+    "email": "contact@dimitrilarue.fr"
+  }
+}
