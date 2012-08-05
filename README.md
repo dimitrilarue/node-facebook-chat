@@ -14,7 +14,7 @@ Install
 
 Example
 -------
-    var FacebookChat = require("./index");
+    var FacebookChat = require("facebook-chat");
 
     var params = {
       facebookId : 'User Facebook ID',
