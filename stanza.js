@@ -40,6 +40,7 @@ stanza.onIq = function(stanza) {
     iq.type = 'vcard';
     iq.vcard = {
       name: vcard.getChild('FN').getText(),
+      from: stanza.from,
       photo: vcard.getChild('PHOTO').getChild('EXTVAL').getText()
     };
   }
