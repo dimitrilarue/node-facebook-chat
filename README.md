@@ -5,6 +5,7 @@ Simple Facebook Chat XMPP client
 Dependencies
 ------------
 Ubuntu :
+
     sudo apt-get install libexpat1 libexpat1-dev libicu-dev
 
 Install
