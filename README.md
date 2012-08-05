@@ -57,3 +57,7 @@ Example
     facebookClient.on('composing', function(from){
       console.log(from + ' compose a message');
     });
+
+License
+-------
+  MIT
