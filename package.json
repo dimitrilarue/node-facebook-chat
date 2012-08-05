@@ -1,6 +1,6 @@
 {
   "name": "facebook-chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple Facebook Chat XMPP client",
   "main": "index.js",
   "keywords": [
