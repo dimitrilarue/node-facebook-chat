@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/SideraX/node-facebook-chat.png)](http://travis-ci.org/SideraX/node-facebook-chat)
 Node Facebook Chat
 ==================
 Simple Facebook Chat XMPP client
