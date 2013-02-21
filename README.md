@@ -19,7 +19,7 @@ Example
     var params = {
       facebookId : 'User Facebook ID',
       appId : 'Your Facebook application ID',
-      secret_key : 'Your Facebook application secret',
+      appSecret : 'Your Facebook application secret',
       accessToken : 'User Facebook access token'
     };
 
