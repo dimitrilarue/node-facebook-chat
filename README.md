@@ -1,3 +1,6 @@
+No longer supported
+==================
+
 Node Facebook Chat
 ==================
 Simple Facebook Chat XMPP client
