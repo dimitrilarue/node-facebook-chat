@@ -1,5 +1,6 @@
 var Element = require('node-xmpp').Element;
 
+
 /**
  * Stanza Utils
  * @type {Object}
@@ -54,18 +55,12 @@ stanza.onIq = function(stanza) {
  */
 stanza.onPresence = function(stanza) {
   var presence = {
-    from : stanza.from
+    from : this.extractFbId(stanza.attrs.from)
   };
 
-  if (stanza.type === 'unavailable') {
+  if (stanza.attrs.type === 'unavailable') {
     presence.type = 'unavailable';
-  }
-
-  var x = stanza.getChild('x');
-  var photoHash = x ? x.getChild('photo').getText() : false;
-  if (photoHash) {
-    presence.photoHash = photoHash;
-  }
+  };
 
   return presence;
 };
@@ -76,21 +71,19 @@ stanza.onPresence = function(stanza) {
  */
 stanza.onMessage = function(stanza) {
   var message = {
-    from: stanza.from,
-    type: stanza.type
+    from: stanza.attrs.from,
+    type: stanza.attrs.type
   };
 
-  if (stanza.type === 'chat') {
+  if (stanza.attrs.type === 'chat') {
     //Message
-    var body = stanza.getChild('body');
-    if (body) {
-      message.body = body.getText();
+    if (stanza.children[0].name == "body") {
+      message.body = stanza.children[0].children;
       return message;
     }
 
     //Compose
-    var composing = stanza.getChild('composing');
-    if (composing) {
+    if (stanza.children[0].name == "composing") {
       message.composing = true;
       return message;
     }
@@ -113,5 +106,5 @@ stanza.message = function(to, message) {
 
 
 stanza.extractFbId = function(from) {
-  return from.substr(1, from.indexOf('@'));
+  return from.substr(1, from.indexOf('@') - 1);
 };
