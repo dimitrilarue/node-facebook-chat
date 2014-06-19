@@ -23,7 +23,8 @@ function FacebookChat(params) {
     jid: '-'+ params.facebookId +'@chat.facebook.com',
     api_key: params.appId,
     secret_key: params.appSecret,
-    access_token: params.accessToken
+    access_token: params.accessToken,
+    host: 'chat.facebook.com'
   });
 
   //If a error is receive
